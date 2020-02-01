@@ -1,4 +1,4 @@
-# Install Moodle eith Apache2
+# Install Moodle with Apache2
 ***
 Moodle relies on a few pieces of software, including a spell-checking library and a graphing library. Moodle is a PHP application, and it has a few additional PHP library dependencies as well. Before we install Moodle, let’s install all of the prerequisite libraries using the package manager. First, ensure you have the latest list of packages:
 
@@ -25,14 +25,14 @@ Then set its ownership to make sure that the web service user www-data can acces
 
 Then change the permissions on the folder so that only the owner has full permissions:
 
-```$ **sudo chmod -R 0770 /var/moodledata**
+```$ sudo chmod -R 0770 /var/moodledata
 ```
 ### Set the language you want to use and click Next.
 ### On the next screen, set the Data Directory to /var/moodledata and click Next.
 ### On the the Choose Database Driver page, set Database driver to Improved MySQL (native mysqli). Then click Next.
-### On the Database setting page, enter the username and password for the Moodle MySQL user you created in Step 3. The other ### fields can be left as they are. Click Next to continue.
+### On the Database setting page, enter the username and password for the Moodle MySQL user. The other ### fields can be left as they are. Click Next to continue.
 ### Review the license agreement and confirm that you agree to its terms by pressing Continue.
-### Review the Server Checks page for any possible issues. Ensure the message “Your server environment meets all minimum ### requirements” exists at the bottom and press Continue.
+### Review the Server Checks page for any possible issues. Ensure the message “Your server environment meets all minimum requirements” exists at the bottom and press Continue.
 ### Moodle will install several components, displaying “Success” messages for each. Scroll to the bottom and press Continue.
 ### You’ll then see a page where you can set up your administrator account for Moodle.
 ### For Username, enter anything you’d like, ar accept the default.
