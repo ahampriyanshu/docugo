@@ -11,13 +11,13 @@ The commands for modifying file permissions and ownership are:
 There are three types of access restrictions:
 
 |Permission | Action | chmod option |
-|-----------------------------------|
-|read       | (view) |  r or 4      |
-|-----------------------------------|
+|-----------|--------|--------------|
+|read       | (view) |              |
+|           |        |              |
 |write      | (edit) |  w or 2      |
-|-----------------------------------|
+|           |        |              |
 |execute    | execute|x or 1        |
-|-----------------------------------|
+|           |        |              |
 
 
 
