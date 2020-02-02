@@ -16,6 +16,12 @@ There are three types of access restrictions:
 |write      | edit |  w or 2      |
 |execute    | execute|  x or 1      |
 
+|User | ls -l  |
+|-----------|--------|
+| owner     |-rwx------| 	
+| gruop     | ----rwx---| 
+| other    | -------rwx|
+
 
 
 ***
