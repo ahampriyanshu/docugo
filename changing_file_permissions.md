@@ -23,6 +23,22 @@ There are three types of access restrictions:
 | other    | -------rwx|
 
 
+| Options | Definition |
+----------|------------|
+|u |owner | 
+|g |group |
+|o |other |
+|a |all |
+|x |execute|
+|w |write|
+|r |read |
+|+|add permission|
+|-|remove permission|
+|=|set permission|
+
+
+
+
 
 ***
 ## With GUI
