@@ -1,13 +1,5 @@
 <img src="/images/moodlelogo.png" width="200" height="200"/>           <img src="/images/NGINX.png" height="200" width="400"/>
 # What if moodle is running in plain HTML without CSS
-***
-## PHP-FPM
-Nginx is usually configured to interface with PHP via php-fpm.PHP-FPM's default behaviour for pools is usually to restrict the execution of scripts to a specific extension, for example .php. You should ensure that your php-fpm is configured 
-
- ``` vim /etc/php5/fpm/pool.d/www.conf ```
-* Add .php extention
-``` security.limit_extensions = .php ```
-
 ## Slashing arguments in NGINX
 ***
 Nginx
@@ -22,9 +14,10 @@ nginx.conf location:
     include                  fastcgi_params;
     fastcgi_param   PATH_INFO       $fastcgi_path_info;
     fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;<br>
-} ```
+} 
+```
 
-If the above does not work try the following: Note: This was for CentOS 7.6 (1804), MariaDB 10.3, Nginx 1.15 and PHP 7.3.5
+If the above does not work try this:
 
 ````location ~ ^(.+\.php)(.*)$ {
     root /usr/share/nginx/html/moodle/;
@@ -36,3 +29,4 @@ If the above does not work try the following: Note: This was for CentOS 7.6 (180
     fastcgi_param   PATH_INFO       $fastcgi_path_info;
     fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
 }
+```
