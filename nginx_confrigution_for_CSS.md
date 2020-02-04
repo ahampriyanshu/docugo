@@ -2,9 +2,9 @@
 # What if moodle is running in plain HTML without CSS
 ## Slashing arguments in NGINX
 ***
-You will need to add the following 'slash arguments' in the nginx.conf file to enable CSS.[further explanation at 'Using slash arguments'](https://docs.moodle.org/37/en/Using_slash_arguments)<br>
+You will need to add the following 'slash arguments' in the nginx.conf file to enable CSS.[further explanation of slash arguments](https://docs.moodle.org/37/en/Using_slash_arguments)<br>
 
-vim /etc/nginx/nginx.conf 
+``` vim /etc/nginx/nginx.conf ```
 
 ```location ~ [^/]\.php(/|$) {
     fastcgi_split_path_info  ^(.+\.php)(/.+)$;
@@ -18,7 +18,7 @@ vim /etc/nginx/nginx.conf
 
 If the above does not work try this:
 
-````location ~ ^(.+\.php)(.*)$ {
+```location ~ ^(.+\.php)(.*)$ {
     root /usr/share/nginx/html/moodle/;
     fastcgi_split_path_info  ^(.+\.php)(.*)$;
     fastcgi_index            index.php;
@@ -29,3 +29,4 @@ If the above does not work try this:
     fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
 }
 ```
+**! Voila !**
