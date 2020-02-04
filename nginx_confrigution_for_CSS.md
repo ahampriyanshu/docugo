@@ -15,17 +15,18 @@ Add the following 'slash arguments' compatible 'location' block to your vhosts '
 
 nginx.conf location:
 
-location ~ [^/]\.php(/|$) {
+```location ~ [^/]\.php(/|$) {
     fastcgi_split_path_info  ^(.+\.php)(/.+)$;
     fastcgi_index            index.php;
     fastcgi_pass             127.0.0.1:9000 (or your php-fpm socket);
     include                  fastcgi_params;
     fastcgi_param   PATH_INFO       $fastcgi_path_info;
-    fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
-}
+    fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;<br>
+} ```
+
 If the above does not work try the following: Note: This was for CentOS 7.6 (1804), MariaDB 10.3, Nginx 1.15 and PHP 7.3.5
 
-location ~ ^(.+\.php)(.*)$ {
+````location ~ ^(.+\.php)(.*)$ {
     root /usr/share/nginx/html/moodle/;
     fastcgi_split_path_info  ^(.+\.php)(.*)$;
     fastcgi_index            index.php;
