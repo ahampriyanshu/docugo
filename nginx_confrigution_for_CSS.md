@@ -1,11 +1,10 @@
-&emsp;&emsp; <img src="/images/moodlelogo.png" width="200" height="200"/>  &emsp;&emsp;&emsp; <img src="/images/NGINX.png" height="200" width="400"/>
+&emsp;&emsp;&emsp;&emsp; <img src="/images/moodlelogo.png" width="200" height="200"/>  &emsp;&emsp;&emsp; <img src="/images/NGINX.png" height="200" width="400"/>
 # What if moodle is running in plain HTML without CSS
 ## Slashing arguments in NGINX
 ***
-Nginx
-Add the following 'slash arguments' compatible 'location' block to your vhosts 'server' in your nginx configuration (further explanation at 'Using slash arguments').
+You will need to add the following 'slash arguments' in the nginx.conf file to enable CSS.[further explanation at 'Using slash arguments'](https://docs.moodle.org/37/en/Using_slash_arguments)<br>
 
-nginx.conf location:
+vim /etc/nginx/nginx.conf 
 
 ```location ~ [^/]\.php(/|$) {
     fastcgi_split_path_info  ^(.+\.php)(/.+)$;
