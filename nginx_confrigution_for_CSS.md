@@ -1,4 +1,4 @@
-&nbsp; <img src="/images/moodlelogo.png" width="200" height="200"/>  &emsp; <img src="/images/NGINX.png" height="200" width="400"/>
+&emsp;&emsp; <img src="/images/moodlelogo.png" width="200" height="200"/>  &emsp;&emsp;&emsp; <img src="/images/NGINX.png" height="200" width="400"/>
 # What if moodle is running in plain HTML without CSS
 ## Slashing arguments in NGINX
 ***
