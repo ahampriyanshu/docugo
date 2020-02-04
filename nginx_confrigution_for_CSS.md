@@ -6,7 +6,8 @@ You will need to add the following 'slash arguments' in the nginx.conf file to e
 
 ``` vim /etc/nginx/nginx.conf ```
 
-```location ~ [^/]\.php(/|$) {
+``` 
+    location ~ [^/]\.php(/|$) {
     fastcgi_split_path_info  ^(.+\.php)(/.+)$;
     fastcgi_index            index.php;
     fastcgi_pass             127.0.0.1:9000 (or your php-fpm socket);
@@ -18,7 +19,8 @@ You will need to add the following 'slash arguments' in the nginx.conf file to e
 
 If the above does not work try this:
 
-```location ~ ^(.+\.php)(.*)$ {
+```
+    location ~ ^(.+\.php)(.*)$ {
     root /usr/share/nginx/html/moodle/;
     fastcgi_split_path_info  ^(.+\.php)(.*)$;
     fastcgi_index            index.php;
