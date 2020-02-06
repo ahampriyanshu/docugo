@@ -1,4 +1,5 @@
-# Install Moodle with Apache2,MySQL and PHP-FPM
+&emsp;&emsp;&emsp;&emsp; <img src="/images/moodlelogo.png" width="200" height="200"/>  &emsp;&emsp;&emsp; <img src="/images/NGINX.png" height="200" width="400"/>
+# Install Moodle with Apache2,MySQL and PHP
 ## Install Apache2
 ***
 ```sudo apt install apache2```
@@ -6,6 +7,10 @@
 ## Install PHP with all the prerequisites
 ***
 ```sudo apt install php libapache2-mod-php php-mysql php-fpm php  php-mcrypt php-cli php-mysql php-gd php-imagick php-recode php-tidy php-xmlrpc```
+
+#### Some common errors
+* [504 timeout error](/504_timeout_error_while_installing.md)
+* [Linux file permissions](/changing_file_permissions.md)
 
 ## Install MySQL Database Server
 ***
