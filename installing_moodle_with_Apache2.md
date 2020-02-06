@@ -1,11 +1,11 @@
-# Install Moodle with Apache2
+# Install Moodle with Apache2,MySQL and PHP-FPM
 ***
 Moodle relies on a few pieces of software, including a spell-checking library and a graphing library. Moodle is a PHP application, and it has a few additional PHP library dependencies as well. Before we install Moodle, let’s install all of the prerequisite libraries using the package manager. First, ensure you have the latest list of packages:
 
 ``` $ sudo apt-get update ```
 Then install Moodle’s dependencies:
 
-``` $ sudo apt-get install aspell graphviz php7.0-curl php7.0-gd php7.0-intl php7.0-ldap php7.0-mysql php7.0-pspell php7.0-xml php7.0-xmlrpc php7.0-zip ```
+``` $ sudo apt-get install aspell graphviz php7.4-curl php7.4-gd php7.4-intl php4.0-ldap php7.4-mysql php7.4-pspell php7.4-xml php7.4-xmlrpc php7.4-zip ```
 Next, restart the Apache web server to load the modules you just installed:
 
 ``` $ sudo systemctl restart apache2 ```
@@ -13,22 +13,24 @@ Now we are ready to download and install Moodle itself. We’ll use curl to down
 ***
 The following command will go to the Moodle website and get the compressed package that contains the entire current, stable version of Moodle into the file moodle.tgz. The -L flag tells curl to follow redirects.
 
-``` $ curl -L https://download.moodle.org/download.php/direct/stable32/moodle-latest-32.tgz > moodle.tgz ```
+``` $ curl -L https://download.moodle.org/download.php/direct/stable38/moodle-latest-38.tgz > moodle.tgz ```
 Now we can uncompress the file with the tar program and place the resulting files in the web document root:
 
 ``` $ sudo tar -xvzf moodle.tgz -C /var/www/html```
 
 ***
-``` $ sudo mkdir /var/moodledata ```
+``` $ sudo mkdir /var/www/moodledata ```
 
 Then set its ownership to make sure that the web service user www-data can access the directory:
 
-```$ sudo chown -R www-data /var/moodledata ```
+```$ sudo chown -R www-data /var/www/moodledata ```
 
 Then change the permissions on the folder so that only the owner has full permissions:
 
-```$ sudo chmod -R 0770 /var/moodledata
+```$ sudo chmod -R 0770 /var/www/moodledata
 ```
+## Now set up your admin account
+***
 * Set the language you want to use and click Next.
 * On the next screen, set the Data Directory to /var/moodledata and click Next.
 * On the the Choose Database Driver page, set Database driver to Improved MySQL (native mysqli). Then click Next.
