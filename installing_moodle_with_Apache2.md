@@ -9,7 +9,6 @@
 ```sudo apt install php libapache2-mod-php php-mysql php-fpm php  php-mcrypt php-cli php-mysql php-gd php-imagick php-recode php-tidy php-xmlrpc```
 
 #### Some common errors
-* [504 timeout error](/504_timeout_error_while_installing.md)
 * [Linux file permissions](/changing_file_permissions.md)
 
 ## Install MySQL Database Server
