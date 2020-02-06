@@ -4,7 +4,9 @@
 A 504 Gateway Timeout Error indicates that a web server attempting to load a page for you did not get a timely response from another server from which it requested information.
 
 Edit to nginx.conf file 
+
 ``` nano /etc/nginx/nginx.conf ```
+
 Add these variables to nginx.conf file:
 
 http {  
@@ -23,4 +25,6 @@ http {
 
 And then restart:
 
-``` service nginx reload ```
+``` service nginx reload 
+    service nginx restart
+```
