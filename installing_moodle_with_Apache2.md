@@ -1,4 +1,4 @@
-&emsp;&emsp;&emsp;&emsp; <img src="/images/moodlelogo.png" width="200" height="200"/>  &emsp;&emsp;&emsp; <img src="/images/NGINX.png" height="200" width="400"/>
+&emsp;&emsp;&emsp;&emsp; <img src="/images/moodlelogo.png" width="200" height="200"/>  &emsp;&emsp;&emsp; <img src="/images/apache2.jpeg" height="200" width="400"/>
 # Install Moodle with Apache2,MySQL and PHP
 ## Install Apache2
 ***
