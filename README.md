@@ -6,8 +6,8 @@
 * [Configuring CSS in NGNIX](/nginx_confrigution_for_CSS.md)
 * [504 timeout error](/504_timeout_error_while_installing.md)
 * [Linux file permissions](/changing_file_permissions.md)
-* [Installing Syntax Highlighter Plugin](/Installing_syntax_highlighter)
-* [Installing Gismo Plugin](/Installing_gizmos.md)
+* [Installing Syntax Highlighter Plugin](/Installing_syntax_highlighter.md)
+* [Installing Gismo Plugin](/Installing_gismo.md)
 
 
 
