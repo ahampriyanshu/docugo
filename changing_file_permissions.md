@@ -2,7 +2,7 @@
 
 Each file has access restrictions with permissions, user restrictions with owner/group association. Permissions are referred to as bits.. With the help of some of the user-friendly desktop interfaces available for example Ubuntu,Kali,Fedorra,etc user can change the file permission and even ownership with GUI.
 ***
-## With CUI
+## With CLI
 To change or edit files that are owned by root, sudo must be used.
 The commands for modifying file permissions and ownership are:
 
