@@ -7,8 +7,6 @@ VPL is the easy way to manage programming assignments in Moodle. Its features of
 You can git clone by 
 [Download Latest VPL](https://github.com/jcrodriguez-dis/moodle-mod_vpl/archive/master.zip)
 
-## Enable Copy - Paste
-![](/images/VPL.png)
-
 ## Disable Copy - Paste
+![](/images/VPL.png)
 
