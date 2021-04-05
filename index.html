@@ -5,38 +5,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>DocuGo</title>
+  <title>Docugo</title>
   <meta name="description" content="Document on the Go" />
-  <meta name="keywords" content="docugo,fo,docu,doc,docx,csv" />
+  <meta name="keywords" content="Docugo,fo,docu,doc,docx,csv" />
   <meta name="author" content="ahampriyanshu" />
-  <link rel="shortcut-icon" href="favicon.ico">
-  <!-- <link rel="icon" type="image/png" sizes="192x192" href="asset/img/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="asset/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="asset/img/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="asset/img/favicon-16x16.png"> -->
-  <link rel="manifest" href="manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut-icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
   <link href="asset/css/style.css" rel="stylesheet" />
   <link href="asset/css/tailwind.min.css" rel="stylesheet" />
   <link href="asset/css/custom-forms.min.css" rel="stylesheet" />
 </head>
 
-<body class="gradient leading-relaxed tracking-wide flex flex-col">
+<body class="leading-relaxed tracking-wide flex flex-col">
   <upper class="gradient">
   <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-6">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6">
       <div class="block lg:hidden">
         <div class="pl-4 flex items-center">
           <a class="hover:no-underline font-bold text-2xl lg:text-4xl" href="index.html">
-            <img height="72" width="72" src="asset/img/logo.png" alt="DocuGoLogo" />
+            <img height="72" width="72" src="asset/img/logo.png" alt="DocugoLogo" />
           </a>
         </div>
       </div>
       <div class="hidden lg:block">
         <div class="pl-4 flex items-center">
           <a class="hover:no-underline font-bold text-2xl lg:text-4xl" href="index.html">
-            <img height="128" width="128" src="asset/img/logo.png" alt="DocuGoLogo" />
+            <img height="128" width="128" src="asset/img/logo.png" alt="DocugoLogo" />
           </a>
         </div>
       </div>
@@ -55,29 +65,23 @@
         id="nav-content">
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
           <li class="mr-3">
-            <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="index.html">Home</a>
-          </li>
-          <li class="mr-3">
-            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="https://github.com/ahampriyanshu/DocuGo/README.md">About</a>
-          </li>
-          <li class="mr-3">
             <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
               href="https://ahampriyanshu.github.io/">Contact</a>
           </li>
         </ul>
-        <a href="https://github.com/ahampriyanshu/DocuGo" id="navAction"
-          class="mx-auto gradient2 lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow">
-          GitHub
+        <a href="asset/sample.csv" id="navAction"
+          class="mx-auto gradient2 lg:mx-0 hover:underline text-gray-800 
+          font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow">
+          sample.csv
         </a>
       </div>
     </div>
   </nav>
 
-  <div class="container mx-auto h-screen">
+  <div class="container mx-auto">
     <div class="text-center px-3 lg:px-0">
       <h1 class="my-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight">
-        Create high quality PDF certificate in bulk
+        Create preformatted documents in bulk
       </h1>
       <p class="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8">
         <button class="hover:underline text-gray-600" onclick="document.getElementById('helpModal').showModal()" id="btn" >Click here</button> to know how this works
@@ -93,7 +97,6 @@
               </label>
             </div>
           </div>
-          <button onclick="generate()">Generate document</button>
           <button
             class="mx-auto gradient2 lg:mx-0 hover:underline text-black font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow"
             type="submit" id="upload">Download
@@ -102,31 +105,96 @@
       </div>
       <a href="#demoForm"
         class="inline-block mx-auto lg:mx-0 hover:underline bg-transparent text-gray-600 font-extrabold my-2 md:my-6 py-2 lg:py-4 px-8">
-      Try a demo instead</a>
+      Create Single Document</a>
     </div>
   </div>
 </upper>
 
-  <section class="bg-white pt-12 mt-24 lg:mt-36">
-    <div class="container mx-auto flex flex-wrap items-center justify-between mt-12">
-      <h2 class="w-full my-2 text-2xl lg:text-3xl font-black leading-tight text-center text-gray-800 mt-12">
-        Create Single Doc
-      </h2>
+  <section>
+    <h2 class="w-full my-2 text-2xl lg:text-3xl font-black leading-tight text-center text-gray-800 mt-12">
+    Single Form
+    </h2>
+    <div class="container mx-auto flex flex-wrap items-center justify-between">
       <div class="w-full mb-4">
         <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
-
     </div>
 
     <div id="demoForm" class="w-full mx-auto max-w-3xl bg-white p-8 text-gray-700 ">
-      <div class="flex flex-wrap mb-3">
+
+      <div class="flex flex-wrap mb-6">
+        <div class="relative w-full appearance-none label-floating">
+          <textarea
+            class="name tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+            name="addressOfLender" id="addressOfLender" placeholder="Address of lender" required></textarea>
+          <label for="addressOfLender"
+            class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+            Address of Lender
+          </label>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap mb-6">
         <div class="relative w-full appearance-none label-floating">
           <input
             class="name tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
-            name="participant" id="participant" type="text" placeholder="Name of the participant" required>
-          <label for="participant"
+            name="amountOfMortgage" id="amountOfMortgage" type="number" placeholder="Amount of Mortage" required>
+          <label for="amountOfMortgage"
             class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
-            Name of the participant
+            Amount of Mortage
+          </label>
+        </div>
+      </div>
+
+
+      <div class="flex flex-wrap mb-6">
+        <div class="relative w-full appearance-none label-floating">
+          <input
+            class="name tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+            name="borrowerLawFirmName" id="borrowerLawFirmName" type="text" placeholder="Name of the borrower's law firm" required>
+          <label for="borrowerLawFirmName"
+            class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+            Name of the borrower's law firm
+          </label>
+        </div>
+      </div>
+
+
+      <div class="flex flex-wrap mb-6">
+        <div class="relative w-full appearance-none label-floating">
+          <input
+            class="name tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+            name="closingDate" id="closingDate" type="date" placeholder="Closing date" required>
+          <label for="closingDate"
+            class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+            Closing date
+          </label>
+        </div>
+      </div>
+
+
+      <div class="flex flex-wrap mb-6">
+        <div class="relative w-full appearance-none label-floating">
+          <input
+            class="name tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+            name="dateOfSigning" id="dateOfSigning" type="date" placeholder="Signing date" required>
+          <label for="dateOfSigning"
+            class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+            Signing date
+          </label>
+        </div>
+      </div>
+
+
+
+      <div class="flex flex-wrap mb-6">
+        <div class="relative w-full appearance-none label-floating">
+          <input
+            class="name tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+            name="fileNumber" id="fileNumber" type="text" placeholder="File number" required>
+          <label for="fileNumber"
+            class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+            File number
           </label>
         </div>
       </div>
@@ -135,10 +203,10 @@
         <div class="relative w-full appearance-none label-floating">
           <input
             class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
-            name="organisation" id="organisation" type="text" placeholder="Name of the Organisation" required>
-          <label for="organisation"
+            name="instrumentNumberToDischarged" id="instrumentNumberToDischarged" type="text" placeholder="Instrument number to be discharged" required>
+          <label for="instrumentNumberToDischarged"
             class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
-            Name of the Organisation
+            Instrument number to be discharged
           </label>
         </div>
       </div>
@@ -147,10 +215,10 @@
         <div class="relative w-full appearance-none label-floating">
           <textarea
             class="autoexpand tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
-            name="event" id="event" type="text" placeholder="Details of the Event"></textarea>
-          <label for="event"
+            name="interestRate" id="interestRate" type="text" placeholder="Interest rate"></textarea>
+          <label for="interestRate"
             class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
-            Details of the Event
+            Interest rate
           </label>
         </div>
       </div>
@@ -159,10 +227,10 @@
         <div class="relative w-full appearance-none label-floating">
           <input
             class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
-            name="sign" id="sign" type="text" placeholder="Name of the Organiser" required>
-          <label for="sign"
+            name="nameOfLender" id="nameOfLender" type="text" placeholder="Name of the lender" required>
+          <label for="nameOfLender"
             class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
-            Name of the Organiser
+            Name of the lender
           </label>
         </div>
       </div>
@@ -171,10 +239,85 @@
         <div class="relative w-full appearance-none label-floating">
           <input
             class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
-            name="designation" id="designation" type="text" placeholder="Designation of the Organiser" required>
-          <label for="designation"
+            name="nameOfBorrower" id="nameOfBorrower" type="text" placeholder="Name of the borrower" required>
+          <label for="nameOfBorrower"
             class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
-            Designation of the Organiser
+            Name of the borrower
+          </label>
+        </div>
+      </div>
+
+
+      <div class="flex flex-wrap mb-6">
+        <div class="relative w-full appearance-none label-floating">
+          <input
+            class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+            name="municipalityOfSigning" id="municipalityOfSigning" type="text" placeholder="Municipality of signing" required>
+          <label for="municipalityOfSigning"
+            class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+            Municipality of signing
+          </label>
+        </div>
+      </div>
+
+
+      <div class="flex flex-wrap mb-6">
+        <div class="relative w-full appearance-none label-floating">
+          <input
+            class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+            name="maturityDate" id="maturityDate" type="date" placeholder="Maturity date" required>
+          <label for="maturityDate"
+            class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+            Maturity date
+          </label>
+        </div>
+      </div>
+
+
+      <div class="flex flex-wrap mb-6">
+        <div class="relative w-full appearance-none label-floating">
+          <textarea
+            class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+            name="propertyAddress" id="propertyAddress" placeholder="Property address" required></textarea>
+          <label for="propertyAddress"
+            class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+            Property address
+          </label>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap mb-6">
+        <div class="relative w-full appearance-none label-floating">
+          <textarea
+            class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+            name="propertyAddressFeild" id="propertyAddressFeild" placeholder="Property address feild" required></textarea>
+          <label for="propertyAddressFeild"
+            class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+            Property address feild
+          </label>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap mb-6">
+        <div class="relative w-full appearance-none label-floating">
+          <input
+            class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+            name="priorityOfMortgage" id="priorityOfMortgage" type="text" placeholder="Priority of mortgage" required>
+          <label for="priorityOfMortgage"
+            class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+            Priority of mortgage
+          </label>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap mb-6">
+        <div class="relative w-full appearance-none label-floating">
+          <input
+            class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+            name="prepaymentProvisions" id="prepaymentProvisions" type="text" placeholder="Prepayment provisions" required>
+          <label for="prepaymentProvisions"
+            class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+            Prepayment provisions
           </label>
         </div>
       </div>
@@ -184,7 +327,7 @@
           <button
             class="mx-auto gradient2 lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
             id="submitBtn">
-            Download
+            Create Doc
           </button>
         </div>
       </div>
@@ -280,10 +423,10 @@
            </div>
          </div>
             <div class="w-full text-center h-auto py-10 px-2  bg-gray-200 rounded text-gray-500">
-              <p>Upload a .csv file contating <b>Participant, Organisation, Event, Sign, Designation</b> <a class="hover:underline text-gray-800 font-extrabold"
-                  href="asset/sample.csv">click here</a> to download demo file.</p>
+              <p> <a class="hover:underline text-gray-800 font-extrabold"
+                href="asset/sample.csv">Click here</a> to download sample .csv file  => Enter data in correct sequence => Upload => download</p>
      <p>Or fill up <a class="hover:underline text-gray-800 font-extrabold"
-      href="https://DocuGo.vercel.app/#demoForm">this</a> form to try a demo instead.</p>
+      href="https://Docugo.vercel.app/#demoForm">this</a> form to create single document instead.</p>
            </div>
      
            
@@ -292,14 +435,18 @@
          </div>
  </dialog>
 
- <!-- <script type="text/javascript">
+ <script type="text/javascript">
 
-  if('serviceWorker' in navigator){
-        navigator.serviceWorker.register('sw.js')
-                .then(reg => console.log('service worker registered', reg))
-                .catch(err => console.log('service worker not registered', err));
-  }
-  </script> -->
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker
+      .register("sw.js")
+      .then(res => console.log("service worker registered"))
+      .catch(err => console.log("service worker not registered", err));
+  });
+}
+
+  </script>
   <script src="asset/js/index.js"></script>
   <script src="asset/js/parse.js"></script>
   <script src="asset/js/docxtemplater.js"></script>

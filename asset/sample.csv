@@ -1,4 +1,4 @@
-addressOfLender; amountOfMortgage; borrowerLawFirmName; closingDate; dateOfSigning; fileNumber; instrumentNumberToDischarged; interestRate; nameOfLender; nameOfBorrower; municipalityOfSigning; maturityDate; propertyAddress; propertyAddressFeild; priorityOfMortgage; prepaymentProvisions,
+addressOfLender; amountOfMortgage; borrowerLawFirmName; closingDate; dateOfSigning; fileNumber; instrumentNumberToDischarged; interestRate; nameOfLender; nameOfBorrower; municipalityOfSigning; maturityDate; propertyAddress; propertyAddressFeild; priorityOfMortgage; prepaymentProvisions
 Dubai, UAE; 1200; ABC Borrower; 10 April, 2021; 5 April, 2021; EA123; DC344; 7.7%; CVC Lender; DGD Borrower; RJC Muncipality; 1 May, 2021; Mumbai, India; Bandra, Mumbai; high; 7 provisions
 Dubai, UAE; 1200; ABC Borrower; 10 April, 2021; 5 April, 2021; EA123; DC344; 7.7%; CVC Lender; DGD Borrower; RJC Muncipality; 1 May, 2021; Mumbai, India; Bandra, Mumbai; high; 7 provisions
 Dubai, UAE; 1200; ABC Borrower; 10 April, 2021; 5 April, 2021; EA123; DC344; 7.7%; CVC Lender; DGD Borrower; RJC Muncipality; 1 May, 2021; Mumbai, India; Bandra, Mumbai; high; 7 provisions
