@@ -1,7 +1,8 @@
 function loadFile(url,callback){
   PizZipUtils.getBinaryContent(url,callback);
 }
-function generate() {
+
+function generate(addressOfLender, amountOfMortgage, borrowerLawFirmName,  closingDate, dateOfSigning, fileNumber, instrumentNumberToDischarged, interestRate, nameOfLender, nameOfBorrower, municipalityOfSigning, maturityDate, propertyAddress, propertyAddressFeild, priorityOfMortgage, prepaymentProvisions, serialNumber) {
   loadFile("asset/sample.docx",function(error,content){
       if (error) { throw error };
 
@@ -40,13 +41,22 @@ function generate() {
       }
 
       doc.setData({
-          property_address_feild: 'John',
-          name_of_borrower: 'Doe',
-          priority_of_mortgage: '0652455478',
-          name_of_lender: 'New Website',
-          address_of_lender : 'cleary',
-          amount_of_mortgage : 'adfdsf',
-          instrument_number_to_discharged : 'dsfd'
+          address_of_lender : addressOfLender,
+          amount_of_mortgage : amountOfMortgage,
+          borrower_law_firm_name : borrowerLawFirmName,
+          closing_date : closingDate,
+          date_of_signing : dateOfSigning,
+          file_number : fileNumber,
+          instrument_number_to_discharged : instrumentNumberToDischarged,
+          interest_rate : interestRate,
+          name_of_lender: nameOfLender,
+          name_of_borrower: nameOfBorrower,
+          municipality_of_signing : municipalityOfSigning,
+          maturity_date : maturityDate,
+          property_address : propertyAddress,
+          property_address_feild: propertyAddressFeild,
+          priority_of_mortgage: priorityOfMortgage,
+          prepayment_provisions: prepaymentProvisions,
       });
       try {
           // render the document (replace all occurences of {first_name} by John, {last_name} by Doe, ...)
@@ -57,10 +67,12 @@ function generate() {
           errorHandler(error);
       }
 
+      const filename = nameOfBorrower + nameOfLender + "_" + serialNumber + ".doc";
+
       var out=doc.getZip().generate({
           type:"blob",
           mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      }) //Output the document using Data-URI
-      saveAs(out,"output.docx")
+      })
+      saveAs(out, filename)
   })
 }

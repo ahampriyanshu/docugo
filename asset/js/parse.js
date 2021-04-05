@@ -8,8 +8,9 @@ window.addEventListener("load", function () {
         reader.onload = function (e) {
           var rows = e.target.result.split("\n");
           for (var i = 1; i < rows.length; i++) {
-            var cells = rows[i].split(",");
-            generatePDF(cells[0], cells[1], cells[2], cells[3], cells[4], i);
+            var cells = rows[i].split(";");
+            console.log(cells)
+            generate(cells[0], cells[1], cells[2], cells[3], cells[4], cells[5], cells[6], cells[7], cells[8], cells[9], cells[10], cells[11], cells[12], cells[13], cells[14], cells[15], i);
           }
         }
         reader.readAsText(fileUpload.files[0]);
