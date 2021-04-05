@@ -1,3 +1,12 @@
+if('serviceWorker' in navigator){
+  try {
+    navigator.serviceWorker.register('sw.js');
+    console.log("Service Worker Registered Successfully");
+  } catch (error) {
+    console.log("Service Worker Registration Failed");
+  }
+}
+
 const addressOfLenderRaw = document.getElementById("addressOfLender");
 const amountOfMortgageRaw = document.getElementById("amountOfMortgage");
 const amountOfMortgageWordsRaw = document.getElementById("amountOfMortgageWords");
@@ -35,7 +44,6 @@ submitBtn.addEventListener("click", () => {
     const propertyAddress = propertyAddressRaw.value;
     const priorityOfMortgage = priorityOfMortgageRaw.value;
     const prepaymentProvisions = prepaymentProvisionsRaw.value;
- 
     generate(nameOfBorrower, propertyAddress, nameOfLender, addressOfLender,  municipalityOfSigning, dateOfSigning, priorityOfMortgage,  closingDate, fileNumber,  borrowerLawFirmName, borrowerLawyerName, amountOfMortgageWords, amountOfMortgage, maturityDate, interestRate,  prepaymentProvisions, instrumentNumberToDischarged ,1);
   });
 
@@ -74,7 +82,6 @@ function generate(nameOfBorrower, propertyAddress, nameOfLender, addressOfLender
         try {
             doc = new window.docxtemplater(zip);
         } catch (error) {
-            // Catch compilation errors (errors caused by the compilation of the template : misplaced tags)
             errorHandler(error);
         }
 
