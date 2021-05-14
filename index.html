@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Docugo</title>
-  <meta name="description" content="Document on the Go" />
+  <meta name="description" content="Generate preformattted word document in bulk" />
   <meta name="keywords" content="Docugo,fo,docu,doc,docx,xls,xlsx" />
   <meta name="author" content="ahampriyanshu" />
   <meta name="msapplication-TileColor" content="#ffffff">
@@ -33,7 +32,7 @@
 </head>
 
 <body class="leading-relaxed tracking-wide flex flex-col">
-  <upper class="gradient">
+  <upper class="gradient md:min-h-screen">
     <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-6">
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6">
         <div class="block lg:hidden">
@@ -63,12 +62,18 @@
         <div
           class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20"
           id="nav-content">
-          <div class="list-reset lg:flex justify-end flex-1 items-center">
-            <a href="asset/sample.xlsx" id="navAction" class="mx-auto gradient2  lg:mx-0 hover:underline text-gray-800 
-          font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow">
-              sample.xlsx
-            </a>
-          </div>
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a class="inline-block py-2 px-4 text-black font-bold no-underline" 
+              href="https://github.com/ahampriyanshu/docugo/README.md">About</a>
+            </li>
+            <li class="mr-3 mt-3 md:mt-0">
+          <a href="https://github.com/ahampriyanshu/docugo" 
+            class="mx-auto gradient2 lg:mx-0 hover:underline text-gray-800 font-extrabold rounded lg:mt-0 py-4 px-8 shadow">
+            GitHub
+          </a>
+        </li>
+        </ul>
         </div>
       </div>
     </nav>
@@ -79,10 +84,9 @@
           Create preformatted documents in bulk
         </h1>
         <p class="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8">
-          <button class="hover:underline text-gray-600" onclick="document.getElementById('helpModal').showModal()"
-            id="btn">Click here</button> to know how this works
+          <button class="hover:underline text-gray-600" onclick="openModal()">Click here</button> to know how this works
         </p>
-        <div class="container center" id="frm">
+        <div class="container center pb-8 md:mb-0" >
           <form action="javascript:void(0);">
             <div class="flex items-center font-extrabold justify-center mt-4">
               <div class="file-input mb-12">
@@ -100,15 +104,15 @@
           </form>
         </div>
         <a href="#demoForm"
-          class="inline-block mx-auto lg:mx-0 hover:underline bg-transparent text-gray-600 font-extrabold my-2 md:my-6 py-2 lg:py-4 px-8">
-          Create Single Document</a>
+        class="hidden md:block inline-block mx-auto lg:mx-0 hover:underline bg-transparent text-gray-600 font-extrabold my-2">
+        Create Single Document</a>
       </div>
     </div>
   </upper>
 
   <section>
     <h2 class="w-full my-2 text-2xl lg:text-3xl font-black leading-tight text-center text-gray-800 mt-12">
-      Single Form
+      Create Single Document
     </h2>
     <div class="container mx-auto flex flex-wrap items-center justify-between">
       <div class="w-full mb-4">
@@ -117,8 +121,6 @@
     </div>
 
     <div id="demoForm" class="w-full mx-auto max-w-3xl bg-white p-8 text-gray-700 ">
-
-
       <div class="flex flex-wrap mb-6">
         <div class="relative w-full appearance-none label-floating">
           <input
@@ -344,37 +346,193 @@
     </div>
   </section>
 
-  <dialog id="helpModal" class=" w-11/12 md:w-1/2 p-5  bg-white rounded-md ">
-    <div class="flex flex-col w-full  ">
-      <div class="flex w-full  =">
-        <div class="flex w-10/12  py-3 justify-center items-center text-2xl font-bold">
-          How it works
-        </div>
-        <div onclick="document.getElementById('helpModal').close();" class="flex w-1/12  justify-center cursor-pointer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
+  <footer class="bg-white">
+    <div class="flex pb-5 px-3 justify-center m-auto text-gray-800 text-sm flex-col
+        md:flex-row max-w-6xl">
+      <div class="flex justify-center mt-4">
+        <a href="https://twitter.com/ahampriyanshu" class="w-6 mx-1">
+          <svg class="fill-current cursor-pointer text-gray-500 hover:text-blue-400" width="100%" height="100%"
+            viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+            style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+            <path id="Twitter" d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
+                    5.373,-12 12,-12c6.627,0 12,5.373 12,12Zm-6.465,-3.192c-0.379,0.168
+                    -0.786,0.281 -1.213,0.333c0.436,-0.262 0.771,-0.676
+                    0.929,-1.169c-0.408,0.242 -0.86,0.418 -1.341,0.513c-0.385,-0.411
+                    -0.934,-0.667 -1.541,-0.667c-1.167,0 -2.112,0.945 -2.112,2.111c0,0.166
+                    0.018,0.327 0.054,0.482c-1.754,-0.088 -3.31,-0.929
+                    -4.352,-2.206c-0.181,0.311 -0.286,0.674 -0.286,1.061c0,0.733 0.373,1.379
+                    0.94,1.757c-0.346,-0.01 -0.672,-0.106 -0.956,-0.264c-0.001,0.009
+                    -0.001,0.018 -0.001,0.027c0,1.023 0.728,1.877 1.694,2.07c-0.177,0.049
+                    -0.364,0.075 -0.556,0.075c-0.137,0 -0.269,-0.014 -0.397,-0.038c0.268,0.838
+                    1.048,1.449 1.972,1.466c-0.723,0.566 -1.633,0.904 -2.622,0.904c-0.171,0
+                    -0.339,-0.01 -0.504,-0.03c0.934,0.599 2.044,0.949 3.237,0.949c3.883,0
+                    6.007,-3.217 6.007,-6.008c0,-0.091 -0.002,-0.183 -0.006,-0.273c0.413,-0.298
+                    0.771,-0.67 1.054,-1.093Z"></path>
           </svg>
-        </div>
-      </div>
-      <div class="w-full text-center  py-10 px-2  bg-gray-200 rounded text-gray-500">
-        <p> <a class="hover:underline text-gray-800 font-extrabold" href="asset/sample.xlsx">Click here</a> to download
-          sample.xlsx file => Enter data in correct sequence => Upload .xlsx => Download .doc</p>
-        <p>Or fill up <a class="hover:underline text-gray-800 font-extrabold"
-            href="https://Docugo.vercel.app/#demoForm">this</a> form to create single document instead.</p>
+        </a>
+        <a href="http://www.github.com/ahampriyanshu" class="w-6 mx-1">
+          <svg class="fill-current cursor-pointer text-gray-500 hover:text-black" width="100%" height="100%"
+            viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            stroke-linejoin: round;
+            stroke-miterlimit: 2;
+          ">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/ahampriyanshu/" class="w-6 mx-1">
+          <svg class="fill-current cursor-pointer text-gray-500 hover:text-blue-500" width="100%" height="100%"
+            viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+            style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+            <path id="Shape" d="M7.3,0.9c1.5,-0.6 3.1,-0.9 4.7,-0.9c1.6,0 3.2,0.3 4.7,0.9c1.5,0.6 2.8,1.5
+                    3.8,2.6c1,1.1 1.9,2.3 2.6,3.8c0.7,1.5 0.9,3 0.9,4.7c0,1.7 -0.3,3.2
+                    -0.9,4.7c-0.6,1.5 -1.5,2.8 -2.6,3.8c-1.1,1 -2.3,1.9 -3.8,2.6c-1.5,0.7
+                    -3.1,0.9 -4.7,0.9c-1.6,0 -3.2,-0.3 -4.7,-0.9c-1.5,-0.6 -2.8,-1.5
+                    -3.8,-2.6c-1,-1.1 -1.9,-2.3 -2.6,-3.8c-0.7,-1.5 -0.9,-3.1 -0.9,-4.7c0,-1.6
+                    0.3,-3.2 0.9,-4.7c0.6,-1.5 1.5,-2.8 2.6,-3.8c1.1,-1 2.3,-1.9
+                    3.8,-2.6Zm-0.3,7.1c0.6,0 1.1,-0.2 1.5,-0.5c0.4,-0.3 0.5,-0.8 0.5,-1.3c0,-0.5
+                    -0.2,-0.9 -0.6,-1.2c-0.4,-0.3 -0.8,-0.5 -1.4,-0.5c-0.6,0 -1.1,0.2
+                    -1.4,0.5c-0.3,0.3 -0.6,0.7 -0.6,1.2c0,0.5 0.2,0.9 0.5,1.3c0.3,0.4 0.9,0.5
+                    1.5,0.5Zm1.5,10l0,-8.5l-3,0l0,8.5l3,0Zm11,0l0,-4.5c0,-1.4 -0.3,-2.5
+                    -0.9,-3.3c-0.6,-0.8 -1.5,-1.2 -2.6,-1.2c-0.6,0 -1.1,0.2 -1.5,0.5c-0.4,0.3
+                    -0.8,0.8 -0.9,1.3l-0.1,-1.3l-3,0l0.1,2l0,6.5l3,0l0,-4.5c0,-0.6 0.1,-1.1
+                    0.4,-1.5c0.3,-0.4 0.6,-0.5 1.1,-0.5c0.5,0 0.9,0.2 1.1,0.5c0.2,0.3 0.4,0.8
+                    0.4,1.5l0,4.5l2.9,0Z"></path>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/ahampriyanshu/" class="w-6 mx-1">
+          <svg class="fill-current cursor-pointer text-gray-500 hover:text-pink-500" width="100%" height="100%"
+            viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            stroke-linejoin: round;
+            stroke-miterlimit: 2;
+          ">
+            <path
+              d="M14.829 6.302c-.738-.034-.96-.04-2.829-.04s-2.09.007-2.828.04c-1.899.087-2.783.986-2.87 2.87-.033.738-.041.959-.041 2.828s.008 2.09.041 2.829c.087 1.879.967 2.783 2.87 2.87.737.033.959.041 2.828.041 1.87 0 2.091-.007 2.829-.041 1.899-.086 2.782-.988 2.87-2.87.033-.738.04-.96.04-2.829s-.007-2.09-.04-2.828c-.088-1.883-.973-2.783-2.87-2.87zm-2.829 9.293c-1.985 0-3.595-1.609-3.595-3.595 0-1.985 1.61-3.594 3.595-3.594s3.595 1.609 3.595 3.594c0 1.985-1.61 3.595-3.595 3.595zm3.737-6.491c-.464 0-.84-.376-.84-.84 0-.464.376-.84.84-.84.464 0 .84.376.84.84 0 .463-.376.84-.84.84zm-1.404 2.896c0 1.289-1.045 2.333-2.333 2.333s-2.333-1.044-2.333-2.333c0-1.289 1.045-2.333 2.333-2.333s2.333 1.044 2.333 2.333zm-2.333-12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.958 14.886c-.115 2.545-1.532 3.955-4.071 4.072-.747.034-.986.042-2.887.042s-2.139-.008-2.886-.042c-2.544-.117-3.955-1.529-4.072-4.072-.034-.746-.042-.985-.042-2.886 0-1.901.008-2.139.042-2.886.117-2.544 1.529-3.955 4.072-4.071.747-.035.985-.043 2.886-.043s2.14.008 2.887.043c2.545.117 3.957 1.532 4.071 4.071.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886z" />
+          </svg>
+        </a>
       </div>
     </div>
-  </dialog>
+  </footer>
+
+
+  <div
+    class="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
+    style="background: rgba(0,0,0,.7); display: none;">
+    <div
+      class="border border-yellow-555 shadow-lg modal-container bg-white w-11/12 md:max-w-3xl mx-auto rounded shadow-lg z-50 overflow-y-auto">
+      <div class="modal-content py-4 text-left px-6">
+        <div class="flex text-black-555 justify-between items-center pb-3">
+          <p class="font-bold text-2xl md:text-3xl p-2 md:p-4">How it works</p>
+          <div class="modal-close cursor-pointer z-50">
+            <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+              viewBox="0 0 18 18">
+              <path
+                d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+              </path>
+            </svg>
+          </div>
+        </div>
+        <div class="w-full text-center py-10 px-2  bg-gray-200 rounded text-gray-500">
+          <p> <a class="hover:underline text-gray-800 font-extrabold" href="asset/sample.xlsx">Click here</a> to
+            download
+            sample .xlsx file => Enter data in correct sequence => Upload .xlsx => Download .docx</p>
+          <p>Or fill up <a class="modal-close hover:underline text-gray-800 font-extrabold" href="#demoForm">this</a>
+            form to create single document instead.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <alert id="alertBox" style="display: none;">
+    <div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+      <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+        <div
+          class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div class="sm:flex sm:items-start">
+              <div
+                class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+                <svg class="h-6 w-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                <h3 class="modalTitle text-lg leading-6 font-medium text-gray-900">
+                </h3>
+                <div class="mt-2">
+                  <p class="message text-sm text-gray-500">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+            <button onclick="openClose('alertBox', 'Closing Dialog', 'Exiting...')" type="button"
+              class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </alert>
+
+  <alert id="successBox" style="display: none;">
+    <div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+      <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+        <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden
+         shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div class="sm:flex sm:items-start">
+              <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full
+               bg-green-100 sm:mx-0 sm:h-10 sm:w-10">
+                <svg class="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-width="2"
+                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.393 7.5l-5.643 5.784-2.644-2.506-1.856 1.858 4.5 4.364 7.5-7.643-1.857-1.857z" />
+                </svg>
+              </div>
+              <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                <h3 class="modalTitle text-lg leading-6 font-medium text-gray-900">
+                </h3>
+                <div class="mt-2">
+                  <p class="message text-sm text-gray-500">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+            <button onclick="openClose('successBox', 'Closing Dialog', 'Exiting...')" type="button"
+              class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </alert>
 
   <script src="asset/js/index.js"></script>
-  <script src="asset/js/parse.js"></script>
   <script src="asset/js/docxtemplater.js"></script>
   <script src="asset/js/pizzip.js"></script>
   <script src="asset/js/FileSaver.js"></script>
   <script src="asset/js/pizzip-utils.js"></script>
   <script src="asset/js/xlsx.full.min.js"></script>
-  <script src="asset/js/jszip.js"></script>
 </body>
 
 </html>
